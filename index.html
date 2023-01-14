@@ -30,7 +30,6 @@
 
             <div class="icon">
                 <div class="fas fa-search" id="search-btn"></div>
-                <div class="fas fa-shopping-cart" id="cart-btn"></div>
                 <div class="fas fa-bars" id="menu-btn"></div>
             </div>
 
@@ -39,36 +38,62 @@
                 <input type="search" id="search-btn" placeholder="Nhập để tìm kiếm...">
                 <label for="search-box" class="fas fa-search"></label>
             </div>
+            <!-- modal -->
+            <button id="cart">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Giỏ Hàng
+            </button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+                            <div class="cart-row">
+                                <div class="cart-item cart-column">
+                                    <img src="img/daxay/matcha.png" class="cart-item-image" alt="">
+                                    <span class="cart-item-title">matcha đá xay</span>
+                                </div>
+                                <div class="cart-price cart-column">59000đ</div>
+                                <div class="cart-quantity cart-column">
+                                    <input class="cart-quantity-input" type="number" value="1">
+                                    <button class="btn btn-danger" type="button">Xóa</button>
+                                </div>
+                            </div>
 
+                            <div class="cart-row">
+                                <div class="cart-item cart-column">
+                                    <img src="img/capheban/latte.png" class="cart-item-image" alt="">
+                                    <span class="cart-item-title">Latte</span>
+                                </div>
+                                <div class="cart-price cart-column">39000đ</div>
+                                <div class="cart-quantity cart-column">
+                                    <input class="cart-quantity-input" type="number" value="1">
+                                    <button class="btn btn-danger" type="button">Xóa</button>
+                                </div>
+                            </div>
 
-            <div class="cart-item-container">
-                <div class="cart-item">
-                    <span class="fas fa-items"></span>
-                    <img src="img/capheta/bacxiu.png">
-                    <div class="content">
-                        <h3>cart item 1</h3>
-                        <div class="price">59.000vnd</div>
+                            
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">98000VNĐ</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                        <button type="button" class="btn btn-primary order">Thanh Toán</button>
                     </div>
                 </div>
-                <div class="cart-item">
-                    <span class="fas fa-items"></span>
-                    <img src="img//capheban/americano.png">
-                    <div class="content">
-                        <h3>cart item 2</h3>
-                        <div class="price">59.000vnd</div>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <span class="fas fa-items"></span>
-                    <img src="img/tra&trasua/olong-cheese.png">
-                    <div class="content">
-                        <h3>cart item 3</h3>
-                        <div class="price">59.000vnd</div>
-                    </div>
-                </div>
-
-                <a href="#" class="btn">thanh toán ngay</a>
-            </div>
+        
         </header>
 
         <!-- header section end -->
@@ -117,88 +142,122 @@
 
         <!-- about section end -->
         <!-- menu section start -->
-        <section class="menu" id="menu">
+        <section class="menu products" id="menu">
             <h1 class="heading">our <span>menu</span></h1>
-            <div class="box-container">
-                <div class="box">
-                    <img src="img/capheban/americano.png">
-                    <h3>Americano</h3>
-                    <div class="price">39.000vnd <span>49.000vnd</span></div>
-                    <a href="#" class="btn">thêm vào giỏ hàng</a>
+            <div class="box-container main-product">
+                <!-- cf bạn -->
+                <div class="box main-product">
+                    <img class="img-prd" src="img/capheban/americano.png">
+                    <h3 class="content-product-h3">Americano</h3>
+                    <div class="price">39000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
                 </div>
 
-                <div class="box">
-                    <img src="img/capheta/bacxiu.png">
-                    <h3>bạc xỉu</h3>
-                    <div class="price">29.000vnd <span>39.000vnd</span></div>
-                    <a href="#" class="btn">thêm vào giỏ hàng</a>
+                <div class="box main-product">
+                    <img class="img-prd" src="img/capheban/esspreso.png">
+                    <h3 class="content-product-h3">esspreso</h3>
+                    <div class="price">39000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
                 </div>
 
-                <div class="box">
-                    <img src="img/tra&trasua/olong-cheese.png">
-                    <h3>olong cheese</h3>
-                    <div class="price">49.000vnd <span>59.000vnd</span></div>
-                    <a href="#" class="btn">thêm vào giỏ hàng</a>
+                <div class="box main-product">
+                    <img class="img-prd" src="img/capheban/latte.png">
+                    <h3 class="content-product-h3">latte</h3>
+                    <div class="price">39000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
                 </div>
-
-
-
-                <!-- repeat-box -->
-                <div class="box">
-                    <img src="img/capheban/americano.png">
-                    <h3>Americano</h3>
-                    <div class="price">59.000vnd <span>49.000vnd</span></div>
-                    <a href="#" class="btn">thêm vào giỏ hàng</a>
-                </div>
-
-                <div class="box">
-                    <img src="img/capheta/bacxiu.png">
-                    <h3>bạc xỉu</h3>
-                    <div class="price">59.000vnd <span>49.000vnd</span></div>
-                    <a href="#" class="btn">thêm vào giỏ hàng</a>
-                </div>
-
-                <div class="box">
-                    <img src="img/tra&trasua/olong-cheese.png">
-                    <h3>olong cheese</h3>
-                    <div class="price">59.000vnd <span>49.000vnd</span></div>
-                    <a href="#" class="btn">thêm vào giỏ hàng</a>
-                </div>
-                <div class="box">
-                    <img src="img/tra&trasua/olong-cheese.png">
-                    <h3>olong cheese</h3>
-                    <div class="price">49.000vnd <span>59.000vnd</span></div>
-                    <a href="#" class="btn">thêm vào giỏ hàng</a>
+                <div class="box main-product">
+                    <img class="img-prd" src="img/capheban/mocha.png">
+                    <h3 class="content-product-h3">moccha</h3>
+                    <div class="price">39000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
                 </div>
 
 
-
-                <!-- repeat-box -->
-                <div class="box">
-                    <img src="img/capheban/americano.png">
-                    <h3>Americano</h3>
-                    <div class="price">59.000vnd <span>49.000vnd</span></div>
-                    <a href="#" class="btn">thêm vào giỏ hàng</a>
+                <!-- cf ta -->
+                <div class="box main-product">
+                    <img class="img-prd" src="img/capheta/bacxiu.png">
+                    <h3 class="content-product-h3">bạc xỉu</h3>
+                    <div class="price">35.000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
                 </div>
 
-                <div class="box">
-                    <img src="img/capheta/bacxiu.png">
-                    <h3>bạc xỉu</h3>
-                    <div class="price">59.000vnd <span>49.000vnd</span></div>
-                    <a href="#" class="btn">thêm vào giỏ hàng</a>
+                <div class="box main-product">
+                    <img class="img-prd" src="img/capheta/cf-den.png">
+                    <h3 class="content-product-h3">cf đen</h3>
+                    <div class="price">19000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
                 </div>
 
-                <div class="box">
-                    <img src="img/tra&trasua/olong-cheese.png">
-                    <h3>olong cheese</h3>
-                    <div class="price">59.000vnd <span>49.000vnd</span></div>
-                    <a href="#" class="btn">thêm vào giỏ hàng</a>
+                <div class="box main-product">
+                    <img class="img-prd" src="img/capheta/cf-sua.png">
+                    <h3 class="content-product-h3">cf sữa</h3>
+                    <div class="price">25000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
+                </div>
+
+
+                <!-- đá xay -->
+                <div class="box main-product">
+                    <img class="img-prd" src="img/daxay/cf-cotdua.png">
+                    <h3 class="content-product-h3">cf cốt dừa</h3>
+                    <div class="price">49000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
+                </div>
+
+                <div class="box main-product">
+                    <img class="img-prd" src="img/daxay/matcha.png">
+                    <h3 class="content-product-h3">matcha đá xay</h3>
+                    <div class="price">49000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
+                </div>
+
+                <div class="box main-product">
+                    <img class="img-prd" src="img/daxay/socola-daxay.png">
+                    <h3 class="content-product-h3">socola đá xay</h3>
+                    <div class="price">49000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
+                </div>
+
+
+                <!-- trà & trà sữa -->
+                <div class="box main-product">
+                    <img class="img-prd" src="img/tra&trasua/olong-cheese.png">
+                    <h3 class="content-product-h3">olong cheese</h3>
+                    <div class="price">49000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
+                </div>
+
+                <div class="box main-product">
+                    <img class="img-prd" src="img/tra&trasua/tradao.png">
+                    <h3 class="content-product-h3">trà đào</h3>
+                    <div class="price">49000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
+                </div>
+
+                <div class="box main-product">
+                    <img class="img-prd" src="img/tra&trasua/tragung.png">
+                    <h3 class="content-product-h3">trà gừng</h3>
+                    <div class="price">49000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
+                </div>
+                <div class="box main-product">
+                    <img class="img-prd" src="img/tra&trasua/trasua.png">
+                    <h3 class="content-product-h3">trà sữa</h3>
+                    <div class="price">49000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
+                </div>
+                <div class="box main-product">
+                    <img class="img-prd" src="img/tra&trasua/travai.png">
+                    <h3 class="content-product-h3">trà vải</h3>
+                    <div class="price">49000vnd</div>
+                    <button type="button" class="btn btn-cart">thêm vào giỏ hàng</button>
                 </div>
             </div>
         </section>
 
         <!-- menu section ends -->
-        <section class="products" id="products">
+        <section class="product" id="product">
             <h1 class="heading"> our  <span>services</span></h1>
             <div class="box-container">
                 <div class="box">
