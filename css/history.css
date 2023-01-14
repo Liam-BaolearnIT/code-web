@@ -1,0 +1,36 @@
+.banner{
+    min-height: 100vh;
+    width:110vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+.banner h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+.dongchi{
+    display: grid;
+    width: auto;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    background-color: #8a181a;
+}
+
+.dongchi .image{
+    display: flex;
+}
